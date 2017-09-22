@@ -13,7 +13,8 @@
       </div>
       <div class="text">
         <ul>
-          <li> Born {{person.birth.year}} in {{person.birth.location}}</li>
+<!--          <li> Born {{person.birth.year}} in {{person.birth.location}}</li> -->
+          <li> {{person.birth.year}} 出生于 {{person.birth.location}}</li>
         </ul>
       </div>
     </div>
@@ -58,13 +59,13 @@
           <i class="fa fa-github"></i>
         </div>
         <div class="text">
-          <span>@{{person.contact.github}}</span>
+<!--         <span>@{{person.contact.github}}</span> -->
           <span>github.com/{{person.contact.github}}</span>
         </div>
       </div>
     </a>
 
-    <a :href="person.contact.website" target="_blank">
+<!--    <a :href="person.contact.website" target="_blank">
       <div class="item">
         <div class="icon">
           <i class="material-icons">language</i>
@@ -74,7 +75,7 @@
         </div>
       </div>
     </a>
-
+-->
     <div class="item last">
       <div class="section-headline">
         {{ lang.headings.skills }}
@@ -88,6 +89,9 @@
             </div>
           </div>
         </div>
+      </div>
+      <div class="section-headline">
+        {{ person.skillDescription }}
       </div>
     </div>
   </div>
@@ -111,9 +115,12 @@
     <div class="section-headline">{{ lang.headings.education }}</div>
     <div class="block" v-for="education in person.education">
       <div class="block-helper"></div>
-      <div class="headline">{{education.degree}}</div>
+      <div class="headline">{{education.degree}}, {{education.timeperiod}}</div>
       <p class="info">
-        {{education.timeperiod}}, {{education.description}}
+         {{education.description}}
+      </p>
+      <p class="info">
+        {{education.course}}
       </p>
     </div>
   </div>
@@ -164,7 +171,7 @@ a {
     padding-top:0;
     margin-top:0;
     letter-spacing:10px;
-    font-weight:400;
+    font-weight:600;
   }
   div {
     margin-top:-5px;
@@ -192,7 +199,7 @@ a {
 }
 .section-headline {
   text-transform:uppercase;
-  font-weight:500;
+  font-weight:600;
   letter-spacing:3px;
   font-size:10pt;
   opacity:0.8;
@@ -217,11 +224,11 @@ ul {
 }
 p {
   margin-top:0;
-  margin-bottom:25px;
+  margin-bottom:20px;
   font-family:'Roboto', sans-serif;
   font-weight:300;
   font-size:10pt;
-  line-height:17pt;
+  line-height:15pt;
 }
 .m_box {
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -244,7 +251,7 @@ h2 {
   font-weight:500;
   margin:0;
   margin:0;
-  font-size:22pt;
+  font-size:25pt;
   line-height:37pt;
 }
 h4 {
@@ -264,13 +271,13 @@ h4 {
     width:90%;
     position:relative;
     background-color:#ffffff;
-    padding:20px;
+    padding:15px;
     margin-top:5px;
     margin-bottom:5px;
     display:inline-block;
     box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     .headline {
-      font-weight:300;
+      font-weight:350;
       display:block;
       font-size:15px;
       color:rgba(0,0,0,0.870588);
@@ -285,7 +292,7 @@ h4 {
       font-size:14px;
       color:rgba(0,0,0,0.870588);
       margin-bottom:0;
-      padding-top:20px;
+      padding-top:12px;
     }
     .icon {
       width:16%;
@@ -440,7 +447,12 @@ h4 {
   }
 }
 #myselfpic {
+//  width:80%;
+//  height:80%;
+//  border-radius:50%;
   background-image:url('../assets/person.jpg');
+//  background-position:center;
+
   color:black;
 }
 #githubIcon {
