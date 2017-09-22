@@ -23,7 +23,9 @@
 <img src="src/assets/preview/resume-side-bar.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 <img src="src/assets/preview/resume-oblique.png" width="150" style="margin-right:5px; border: 1px solid #ccc;" />
 </p>
-
+<p align="left">
+  <a href="https://github.com/daihui/best-resume-ever/blob/master/pdf/material-dark.pdf" target="_blank">My Resume</a>
+</p>
 <br>
 <br>
 
